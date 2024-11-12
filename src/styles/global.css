@@ -11,8 +11,8 @@
 }
 
 :root {
-  --accent: #8926ed;
-  --accent-faint: #8926ed55;
+  --accent: #77bddf;
+  --accent-faint: #77bddf55;
 
   --white: #ffffff;
   --white-light: #fafafa;
@@ -30,18 +30,18 @@
 }
 
 *::selection {
-  background-color: #8926ed50;
-  color: purple;
+  background-color: var(--accent-faint);
 }
 
 body {
   background-color: var(--white-light);
   color: var(--black-light);
 
-  padding: 2rem;
-  max-width: 45rem;
+  padding: 1rem;
+  max-width: 50rem;
   margin: 0 auto;
   vertical-align: baseline;
+  font-size: 14px;
 
   tab-size: 4;
   text-indent: 0;
@@ -159,7 +159,7 @@ img {
   max-height: 500px;
   margin: 20px 0 20px 0;
   display: block;
-  box-shadow: -8px 8px 20px var(--white-dark);
+  box-shadow: -4px 4px 12px var(--white-dark);
 }
 
 video {

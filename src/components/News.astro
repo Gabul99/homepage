@@ -1,0 +1,35 @@
+---
+import {newsList} from '../content/news.ts';
+---
+
+<section>
+  <h3>News</h3>
+  <ul>
+    {newsList.slice(0, 5).map((newsItem) => (
+      <li>
+        <strong>{newsItem.date}</strong> {newsItem.description}
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  section h3 {
+    margin: 0.5em 0;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  section li {
+    margin-bottom: 8px;
+  }
+
+  section li strong {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+  }
+</style>

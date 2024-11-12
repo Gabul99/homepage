@@ -1,17 +1,78 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import News from "../components/News.astro";
+import { publicationList } from "../content/publication";
+import PublicationBlock from "../components/PublicationBlock.astro";
 ---
 
-<Layout title="YOUR NAME">
-  <h1>YOUR NAME</h1>
-
-  <p>
-    Lorem ipsum, dolor sit amet <strong>consectetur adipisicing</strong> elit. Minus
-    sunt porro magni, possimus repellendus maxime. Voluptate incidunt laboriosam
-    officia! Cum, ducimus cumque? Repudiandae atque nostrum perspiciatis repellat
-    sit libero. Enim <a href="/now">voluptate</a> aliquam quae sit, cum quibusdam
-    ad <a href="/uses">possimus eaque</a> delectus eos! Laborum inventore corrupti,
-    animi id recusandae delectus est nisi!
-  </p>
+<Layout title="Heechan Lee">
+  <div class="introduction">
+    <div class="intro-paragraph">
+      <h1>Heechan Lee</h1>
+      <p>
+        I'm senior undergrad student of <a href="https://cs.kaist.ac.kr/" target="_blank">School of Computing</a> at <a href="https://www.kaist.ac.kr/" target="_blank">KAIST</a>.
+        I'm currently working in <a href="https://www.kixlab.org" target="_blank">KAIST Interaction Lab(KIXLAB)</a> as undergraduate research intern.
+        <br />
+        I am set to begin my MS program at KAIST SoC in 2025, as a member of both <a href="https://www.kixlab.org" target="_blank">KIXLAB</a> and <a href="https://cstlab.org/" target="_blank">Collaborate Social Technologies Lab(CSTL)</a>,
+        where I will be co-advised by <a href="https://juhokim.com/" target="_blank">Prof. Juho Kim</a> and <a href="https://joseph.seering.org/" target="_blank">Prof. Joseph Seering</a>.
+        <br />
+        <br />
+        My research interest lies in Human-AI Interaction field, especially LLM Response Evaluation, and AI Training Dataset Optimization.
+        I am interested in solving problems that people face through AI, as well as dealing with challenges that arise from using AI itself.
+        I look forward to contributing to various problems at the intersection of AI and Safety.
+      </p>
+    </div>
+    <img class="main" src="/public//assets//img/main.JPG" />
+  </div>
+  <div class="contacts">
+    <a href="mailto::hclee99@kaist.ac.kr"><img src="/assets/img/mail_icon.svg" class="contact-icon" /></a>
+    <a href="https://github.com/Gabul99" target="_blank"><img src="/assets/img/github.svg" class="contact-icon" /></a>
+    <a href="https://www.linkedin.com/in/heechan-lee-0108a5217/" target="_blank"><img src="/assets/img/linkedin.svg" class="contact-icon" /></a>
+    <a href="https://x.com/heechanleekr" target="_blank"><img src="/public/assets/img/x.svg" class="contact-icon" /></a>
+    <!-- <a href=""><img src="/public/assets/img/google-scholar.svg" class="contact-icon" /></a> -->
+    <a href="https://medium.com/hcleedev" target="_blank" style={{height: 'fit-content'}}>Blog (in Kor)</a>
+  </div>
+  <News />
+  <h3>Publication</h3>
+  {publicationList.map(p => <PublicationBlock publication={p} />)}
 </Layout>
+<style>
+  img.main {
+    width: 240px;
+    height: auto;
+    align-self: flex-start;
+    object-fit: contain;
+  }
+
+  div.introduction {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    .intro-paragraph {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  div.contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+
+  img.contact-icon {
+    all: unset;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  img.contact-icon:hover {
+    opacity: 0.5;
+  }
+</style>

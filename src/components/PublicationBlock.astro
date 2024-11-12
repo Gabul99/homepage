@@ -1,0 +1,55 @@
+---
+import type { Publication } from "../content/publication";
+
+const { publication } = Astro.props as {publication: Publication};
+---
+<div class="container">
+  <img src={publication.imgPath} />
+  <div class="right">
+    <p class="title">{publication.title}</p>
+    <div class="author-list">{publication.authors.map((a, idx) => <span class={a === 'Heechan Lee' ? 'me' : ''}>{a + ((idx === publication.authors.length - 1) ? '' : ',')}</span>)}</div>
+    <p class="conference">{publication.conference}</p>
+  </div>
+</div>
+
+<style>
+  div.container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+  div.right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0;
+  }
+  p.title {
+    all: unset;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  div.author-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 4px;
+  }
+  span {
+    font-size: 12px;
+  }
+  span.me {
+    font-weight: 600;
+  }
+  p.conference {
+    all: unset;
+    font-size: 12px;
+  }
+  img {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    flex-shrink: 0;
+  }
+</style>
