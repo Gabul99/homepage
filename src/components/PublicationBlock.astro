@@ -7,12 +7,15 @@ const { publication } = Astro.props as {publication: Publication};
   <img src={publication.imgPath} />
   <div class="right">
     <p class="title">{publication.title}</p>
-    <div class="author-list">{publication.authors.map((a, idx) => <span class={a === 'Heechan Lee' ? 'me' : ''}>{a + ((idx === publication.authors.length - 1) ? '' : ',')}</span>)}</div>
+    <p>{publication.authors.map((a, idx) => <span class={a === 'Heechan Lee' ? 'me' : ''}>{a + ((idx === publication.authors.length - 1) ? '' : ', ')}</span>)}</p>
     <p class="conference">{publication.conference}</p>
   </div>
 </div>
 
 <style>
+  p {
+    all: unset;
+  }
   div.container {
     display: flex;
     flex-direction: row;
@@ -26,15 +29,8 @@ const { publication } = Astro.props as {publication: Publication};
     min-width: 0;
   }
   p.title {
-    all: unset;
     font-size: 14px;
     font-weight: 600;
-  }
-  div.author-list {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 4px;
   }
   span {
     font-size: 12px;
@@ -43,7 +39,6 @@ const { publication } = Astro.props as {publication: Publication};
     font-weight: 600;
   }
   p.conference {
-    all: unset;
     font-size: 12px;
   }
   img {
@@ -51,5 +46,20 @@ const { publication } = Astro.props as {publication: Publication};
     height: auto;
     margin: 0;
     flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    div.container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      flex-shrink: 0;
+    }
   }
 </style>
