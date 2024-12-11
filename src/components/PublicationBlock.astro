@@ -6,7 +6,11 @@ const { publication } = Astro.props as {publication: Publication};
 <div class="container">
   <img src={publication.imgPath} />
   <div class="right">
+    {publication.mainLink ? 
+    <a class="title" href={publication.mainLink} target="_blank">{publication.title}</a>
+    :
     <p class="title">{publication.title}</p>
+    }
     <p>{publication.authors.map((a, idx) => <span class={a === 'Heechan Lee' ? 'me' : ''}>{a + ((idx === publication.authors.length - 1) ? '' : ', ')}</span>)}</p>
     <p class="conference">{publication.conference}</p>
   </div>
@@ -31,6 +35,13 @@ const { publication } = Astro.props as {publication: Publication};
   p.title {
     font-size: 14px;
     font-weight: 600;
+  }
+  a.title {
+    all: unset;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
   }
   span {
     font-size: 12px;

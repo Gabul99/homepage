@@ -3,7 +3,7 @@ export interface Publication {
   authors: string[];
   conference: string;
   imgPath: string;
-  arxiv?: string;
+  mainLink?: string;
 }
 
 export const publicationList: Publication[] = [
@@ -17,5 +17,6 @@ export const publicationList: Publication[] = [
     ],
     imgPath: "/assets/pub_img/icadl.png",
     conference: "ICADL 2024, Short Paper",
+    mainLink: "https://doi.org/10.1007/978-981-96-0865-2_21",
   },
 ];
