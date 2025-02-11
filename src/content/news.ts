@@ -5,7 +5,7 @@ export interface News {
 
 export const newsList: News[] = [
   {
-    date: "2024-02-03",
+    date: "2025-02-03",
     description: "🔰 I've just joined CSTL as MS student.",
   },
   {
