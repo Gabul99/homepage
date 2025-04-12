@@ -7,7 +7,7 @@ import {newsList} from '../content/news.ts';
   <ul>
     {newsList.slice(0, 5).map((newsItem) => (
       <li>
-        <strong>{newsItem.date}</strong> {newsItem.description}
+        <strong>{newsItem.date}</strong> <span set:html={newsItem.description}></span>
       </li>
     ))}
   </ul>

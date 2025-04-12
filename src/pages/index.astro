@@ -12,7 +12,7 @@ import PublicationBlock from "../components/PublicationBlock.astro";
       <h1>Heechan Lee, 이희찬</h1>
       <p>
         I'm a MS student of <a href="https://cs.kaist.ac.kr/" target="_blank">School of Computing</a> at <a href="https://www.kaist.ac.kr/" target="_blank">KAIST</a>.
-        I'm working in <a href="https://cstlab.org/" target="_blank">Collaborate Social Technologies Lab(CSTL)</a> and <a href="https://www.kixlab.org" target="_blank">KAIST Interaction Lab(KIXLAB)</a>, where I'm advised by <a href="https://joseph.seering.org/" target="_blank">Prof. Joseph Seering</a> and <a href="https://juhokim.com/" target="_blank">Prof. Juho Kim</a>.
+        I'm working in <a href="https://cstlab.org/" target="_blank">Collaborative Social Technologies Lab(CSTL)</a> and <a href="https://www.kixlab.org" target="_blank">KAIST Interaction Lab(KIXLAB)</a>, where I'm advised by <a href="https://joseph.seering.org/" target="_blank">Prof. Joseph Seering</a> and <a href="https://juhokim.com/" target="_blank">Prof. Juho Kim</a>.
         <br />
         <br />
         My research interest lies in <b>Human-AI Interaction</b> field.
@@ -33,8 +33,10 @@ import PublicationBlock from "../components/PublicationBlock.astro";
     <a href="https://medium.com/hcleedev" target="_blank" style={{height: 'fit-content'}}>Blog (in Kor)</a>
   </div>
   <News />
-  <h3>Publication</h3>
-  {publicationList.map(p => <PublicationBlock publication={p} />)}
+  <h3>Publications</h3>
+  <div class="pub-list">
+    {publicationList.map(p => <PublicationBlock publication={p} />)}
+  </div>
 </Layout>
 <style>
   img.main {
@@ -63,6 +65,13 @@ import PublicationBlock from "../components/PublicationBlock.astro";
     flex-direction: row;
     gap: 8px;
     align-items: center;
+  }
+
+  div.pub-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
 
   img.contact-icon {

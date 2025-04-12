@@ -2,6 +2,15 @@
 import type { Publication } from "../content/publication";
 
 const { publication } = Astro.props as {publication: Publication};
+
+const knownAuthors: Record<string, string> = {
+  "Tae Soo Kim": "https://taesookim.com",
+  "Juho Kim": "https://juhokim.com/",
+  "Joseph Seering": "https://joseph.seering.org/",
+  "Yoonjoo Lee": "https://yoonjoolee.com/"
+  // 필요할 때마다 추가
+};
+
 ---
 <div class="container">
   <img src={publication.imgPath} />
@@ -11,7 +20,20 @@ const { publication } = Astro.props as {publication: Publication};
     :
     <p class="title">{publication.title}</p>
     }
-    <p>{publication.authors.map((a, idx) => <span class={a === 'Heechan Lee' ? 'me' : ''}>{a + ((idx === publication.authors.length - 1) ? '' : ', ')}</span>)}</p>
+    <p>
+      {publication.authors.map((a, idx) => {
+        const link = knownAuthors[a];               // a가 knownAuthors에 있는지
+        const className = a === "Heechan Lee" ? "me" : "";
+        const separator = idx === publication.authors.length - 1 ? "" : ", ";
+        return link ? (
+          <a href={link} class={"knownauthor"} target="_blank">
+            {a + separator}
+          </a>
+        ) : (
+          <span class={className}>{a + separator}</span>
+        );
+      })}
+    </p>
     <p class="conference">{publication.conference}</p>
   </div>
 </div>
@@ -25,6 +47,7 @@ const { publication } = Astro.props as {publication: Publication};
     flex-direction: row;
     gap: 16px;
     align-items: center;
+    height: fit-content;
   }
   div.right {
     display: flex;
@@ -42,6 +65,10 @@ const { publication } = Astro.props as {publication: Publication};
     font-weight: 600;
     cursor: pointer;
     text-decoration: underline;
+  }
+  a.knownauthor {
+    font-size: 12px;
+    font-weight: 400;
   }
   span {
     font-size: 12px;
