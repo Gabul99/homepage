@@ -7,7 +7,7 @@ export const newsList: News[] = [
   {
     date: "2025-07-15",
     description:
-      "🇺🇸 Will visit Stanford University with Prof. Joseph! (Jul 16th ~ Jul 18th) First time to go USA",
+      "🇺🇸 Visit Stanford University with Prof. Joseph! (Jul 16th ~ Jul 18th) First time to visit USA!",
   },
   {
     date: "2025-04-25",
