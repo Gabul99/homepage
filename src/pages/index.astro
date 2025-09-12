@@ -4,6 +4,12 @@ import "../styles/global.css";
 import News from "../components/News.astro";
 import { publicationList } from "../content/publication";
 import PublicationBlock from "../components/PublicationBlock.astro";
+
+const grouped = {
+  conference: publicationList.filter((p) => p.type === "conference"),
+  short: publicationList.filter((p) => p.type === "short"),
+  arxiv: publicationList.filter((p) => p.type === "arxiv"),
+};
 ---
 
 <Layout title="Heechan Lee">
@@ -37,7 +43,31 @@ import PublicationBlock from "../components/PublicationBlock.astro";
   <News />
   <h3>Publications</h3>
   <div class="pub-list">
-    {publicationList.map(p => <PublicationBlock publication={p} />)}
+    {grouped.arxiv.length > 0 && (
+    <>
+      <h2 class="section-title">Manuscript</h2>
+      {grouped.arxiv.map((p) => (
+        <PublicationBlock publication={p} />
+      ))}
+    </>
+  )}
+    {grouped.conference.length > 0 && (
+    <>
+      <h2 class="section-title">Conference Paper</h2>
+      {grouped.conference.map((p) => (
+        <PublicationBlock publication={p} />
+      ))}
+    </>
+  )}
+
+  {grouped.short.length > 0 && (
+    <>
+      <h2 class="section-title">Workshop, Poster, Short paper</h2>
+      {grouped.short.map((p) => (
+        <PublicationBlock publication={p} />
+      ))}
+    </>
+  )}
   </div>
 </Layout>
 <style>
@@ -74,6 +104,12 @@ import PublicationBlock from "../components/PublicationBlock.astro";
     flex-direction: column;
     width: 100%;
     gap: 8px;
+  }
+
+  h2.section-title {
+    all: unset;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   img.contact-icon {
