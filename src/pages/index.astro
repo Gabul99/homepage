@@ -41,7 +41,8 @@ const grouped = {
     <a href="https://medium.com/hcleedev" target="_blank" style={{height: 'fit-content'}}>Blog (in Kor)</a>
   </div>
   <News />
-  <h3>Publications</h3>
+  <h3 class="pub-title">Publications</h3>
+  <p class="pub-hint">(* equal contribution)</p>
   <div class="pub-list">
     {grouped.arxiv.length > 0 && (
     <>
@@ -110,6 +111,7 @@ const grouped = {
     all: unset;
     font-size: 14px;
     font-weight: 600;
+    margin-top: 8px;
   }
 
   img.contact-icon {
@@ -120,6 +122,14 @@ const grouped = {
   }
   img.contact-icon:hover {
     opacity: 0.5;
+  }
+
+  h3.pub-title {
+    margin-bottom: 4px;
+  }
+
+  p.pub-hint {
+    margin: 0px;
   }
 
   @media (max-width: 768px) {

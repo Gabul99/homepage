@@ -12,6 +12,21 @@ export interface Publication {
 export const publicationList: Publication[] = [
   {
     title:
+      "Evalet: Evaluating Large Language Models by Fragmenting Outputs into Functions",
+    authors: [
+      "Tae Soo Kim*",
+      "Heechan Lee*",
+      "Yoonjoo Lee",
+      "Joseph Seering",
+      "Juho Kim",
+    ],
+    imgPath: "/assets/pub_img/evalet.png",
+    type: "arxiv",
+    conference: "Arxiv, Under review",
+    mainLink: "https://arxiv.org/abs/2509.11206",
+  },
+  {
+    title:
       "Evaligner: Automatic Prompt and Criteria Refinement from User Feedback",
     authors: ["Heechan Lee", "Tae Soo Kim", "Juho Kim"],
     imgPath: "/assets/pub_img/evaligner.png",

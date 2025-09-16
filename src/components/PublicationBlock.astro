@@ -21,12 +21,29 @@ const knownAuthors: Record<string, string> = {
     <p class="title">{publication.title}</p>
     }
     <p>
-      {publication.authors.map((a, idx) => {
+      <!-- {publication.authors.map((a, idx) => {
         const link = knownAuthors[a];               // a가 knownAuthors에 있는지
         const className = a === "Heechan Lee" ? "me" : "";
         const separator = idx === publication.authors.length - 1 ? "" : ", ";
         return link ? (
           <a href={link} class={"knownauthor"} target="_blank">
+            {a + separator}
+          </a>
+        ) : (
+          <span class={className}>{a + separator}</span>
+        );
+      })} -->
+      {publication.authors.map((a, idx) => {
+        const normalized = a.replace("*", "").trim();
+
+        const knownKey = Object.keys(knownAuthors).find(k => normalized.includes(k));
+        const link = knownKey ? knownAuthors[knownKey] : undefined;
+
+        const className = a.includes("Heechan Lee") ? "me" : "";
+        const separator = idx === publication.authors.length - 1 ? "" : ", ";
+
+        return link ? (
+          <a href={link} class="knownauthor" target="_blank">
             {a + separator}
           </a>
         ) : (
