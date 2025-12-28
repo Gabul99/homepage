@@ -1,16 +1,22 @@
 ---
 import {newsList} from '../content/news.ts';
+
+const initialCount = 5;
+const hasMore = newsList.length > initialCount;
 ---
 
 <section>
   <h3>News</h3>
-  <ul>
-    {newsList.slice(0, 5).map((newsItem) => (
-      <li>
+  <ul id="news-list">
+    {newsList.map((newsItem, index) => (
+      <li class={index >= initialCount ? 'news-item-hidden' : ''}>
         <strong>{newsItem.date}</strong> <span set:html={newsItem.description}></span>
       </li>
     ))}
   </ul>
+  {hasMore && (
+    <button id="news-toggle-btn" class="toggle-btn">Show more</button>
+  )}
 </section>
 
 <style>
@@ -22,6 +28,7 @@ import {newsList} from '../content/news.ts';
   section ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 0;
   }
 
   section li {
@@ -32,4 +39,46 @@ import {newsList} from '../content/news.ts';
     font-weight: bold;
     color: rgba(0, 0, 0, 0.6);
   }
+
+  .news-item-hidden {
+    display: none;
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    padding: 4px 0;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .toggle-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+  }
 </style>
+
+<script>
+  const toggleBtn = document.getElementById('news-toggle-btn');
+  const newsList = document.getElementById('news-list');
+  
+  if (toggleBtn && newsList) {
+    let isExpanded = false;
+    const hiddenItems = newsList.querySelectorAll('.news-item-hidden');
+    
+    toggleBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      
+      hiddenItems.forEach(item => {
+        if (isExpanded) {
+          item.classList.remove('news-item-hidden');
+        } else {
+          item.classList.add('news-item-hidden');
+        }
+      });
+      
+      toggleBtn.textContent = isExpanded ? 'Show less' : 'Show more';
+    });
+  }
+</script>
