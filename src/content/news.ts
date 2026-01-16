@@ -5,6 +5,11 @@ export interface News {
 
 export const newsList: News[] = [
   {
+    date: "2026-01",
+    description:
+      "🎉 Our <a href='https://arxiv.org/abs/2509.11206' target='_blank'>Evalet</a> paper has been accepted to CHI 2026! My first CHI paper!",
+  },
+  {
     date: "2025-09",
     description: "⛱️ Attend UIST 2025 at Busan, Korea. See you at Busan!",
   },
@@ -20,7 +25,7 @@ export const newsList: News[] = [
   },
   {
     date: "2025-03",
-    description: `🎉 My 'Evaligner' paper has been accepted to <a href="https://heal-workshop.github.io/" target="_blank">HEAL Workshop</a> at CHI 2025!`,
+    description: `🎉 My <a href='https://heechanlee.com/assets/HEAL_CHI_Evaligner.pdf' target='_blank'>Evaligner</a> paper has been accepted to <a href="https://heal-workshop.github.io/" target="_blank">HEAL Workshop</a> at CHI 2025!`,
   },
   {
     date: "2025-02",

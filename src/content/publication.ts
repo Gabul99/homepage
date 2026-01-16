@@ -21,8 +21,8 @@ export const publicationList: Publication[] = [
       "Juho Kim",
     ],
     imgPath: "/assets/pub_img/evalet.png",
-    type: "arxiv",
-    conference: "Arxiv, Under review",
+    type: "conference",
+    conference: "CHI 2026 (Conditionally Accepted)",
     mainLink: "https://arxiv.org/abs/2509.11206",
   },
   {
