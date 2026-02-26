@@ -22,7 +22,7 @@ export const publicationList: Publication[] = [
     ],
     imgPath: "/assets/pub_img/evalet.png",
     type: "conference",
-    conference: "CHI 2026 (Conditionally Accepted)",
+    conference: "CHI 2026 (Conditionally accepted)",
     mainLink: "https://arxiv.org/abs/2509.11206",
   },
   {
