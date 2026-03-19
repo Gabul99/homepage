@@ -5,11 +5,24 @@ export interface Publication {
   imgPath: string;
   type: "conference" | "short" | "arxiv";
   mainLink?: string;
+  /** 수상 정보 (예: "Honorable Mention") - 있으면 conference 옆에 칩으로 표시 */
+  award?: string;
 }
 
 // Type: conference, short, arxiv
 
 export const publicationList: Publication[] = [
+  {
+    title:
+      "Accuracy, Diversity, and Reflection: Purpose-driven Evaluation for Social Simulation",
+    authors: ["Heechan Lee", "Joseph Seering"],
+    imgPath: "/assets/pub_img/accuracy.png",
+    type: "short",
+    conference:
+      "CHI 2026 Workshop on LLM Agent Simulation for Policy (PoliSim)",
+    mainLink:
+      "https://heechanlee.com/assets/PoliSim_CHI_26__Simulation_Evaluation.pdf",
+  },
   {
     title:
       "Evalet: Evaluating Large Language Models by Fragmenting Outputs into Functions",
@@ -22,8 +35,9 @@ export const publicationList: Publication[] = [
     ],
     imgPath: "/assets/pub_img/evalet.png",
     type: "conference",
-    conference: "CHI 2026 (Conditionally accepted)",
+    conference: "CHI 2026",
     mainLink: "https://arxiv.org/abs/2509.11206",
+    award: "Honorable Mention",
   },
   {
     title:

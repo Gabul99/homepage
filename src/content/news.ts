@@ -5,6 +5,16 @@ export interface News {
 
 export const newsList: News[] = [
   {
+    date: "2026-03",
+    description:
+      "🎉 My <a href='https://heechanlee.com/assets/PoliSim_CHI_26__Simulation_Evaluation.pdf' target='_blank'>Accuracy, Diversity and Reflection</a> paper has been accepted to <a href='https://polisim.github.io/' target='_blank'>PoliSim Workshop</a> at CHI 2026!",
+  },
+  {
+    date: "2026-03",
+    description:
+      "🏆 Our <a href='https://arxiv.org/abs/2509.11206' target='_blank'>Evalet</a> paper wins Honorable Mention Award at CHI 2026!",
+  },
+  {
     date: "2026-01",
     description:
       "🎉 Our <a href='https://arxiv.org/abs/2509.11206' target='_blank'>Evalet</a> paper has been accepted to CHI 2026! My first CHI paper!",
