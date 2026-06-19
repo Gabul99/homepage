@@ -21,11 +21,12 @@ const grouped = {
         I'm working in <a href="https://cstlab.org/" target="_blank">Collaborative Social Technologies Lab(CSTL)</a> and <a href="https://www.kixlab.org" target="_blank">KAIST Interaction Lab(KIXLAB)</a>, where I'm advised by <a href="https://joseph.seering.org/" target="_blank">Prof. Joseph Seering</a> and <a href="https://juhokim.com/" target="_blank">Prof. Juho Kim</a>.
         <br />
         <br />
-        My research interest lies in <b>Human-AI Interaction</b> field, with a focus on designing interactive systems that enable users to understand and steer AI in the way users intend.
-        I study how users engage in sensemaking and evaluation of large volumes of data (e.g., AI-generated responses) to identify issues and provide meaningful feedback.
-        Ultimately, my goal is to build systems that effectively incorporate user intent across the <i>sensemaking–evaluation–feedback</i> process.
-        <br />
-        I look forward to contributing to various problems at the intersection of human, AI and data.
+        I am interested in <b>Human-AI Interaction</b>, with a focus on designing interactive systems for collaboration between humans and AI agents.
+        My research begins from the question of why people struggle to steer AI systems toward their goals.
+        I study this challenge from two directions: (1) how users can express their intent and provide relevant context to AI agents, and (2) how they can evaluate AI behaviors and provide feedback in return.
+        During my Master’s research, I have explored interfaces that ground multi-agent collaboration in users’ working contexts, as well as interfaces that help users evaluate large-scale AI responses through functional fragmentation.
+        Across these projects, I have found that both prompting AI and auditing AI depend on how users make sense of their data, context, and model outputs.
+        I aim to design interactive systems that support sensemaking and evaluation, helping a broad range of users—from everyday knowledge workers to AI developers—collaborate with AI systems.
       </p>
     </div>
     <img class="main" src="/assets/img/main.JPG" />
@@ -44,7 +45,7 @@ const grouped = {
   <div class="pub-list">
     {grouped.arxiv.length > 0 && (
     <>
-      <h2 class="section-title">Manuscript</h2>
+      <h2 class="section-title">Preprint & Under Review</h2>
       {grouped.arxiv.map((p) => (
         <PublicationBlock publication={p} />
       ))}

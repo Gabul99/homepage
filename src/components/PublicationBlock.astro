@@ -13,7 +13,7 @@ const knownAuthors: Record<string, string> = {
 
 ---
 <div class="container">
-  <img src={publication.imgPath} />
+  {publication.type !== "arxiv" && <img src={publication.imgPath} />}
   <div class="right">
     {publication.mainLink ? 
     <a class="title" href={publication.mainLink} target="_blank">{publication.title}</a>

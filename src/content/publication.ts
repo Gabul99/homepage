@@ -14,6 +14,21 @@ export interface Publication {
 export const publicationList: Publication[] = [
   {
     title:
+      "An Interface Integrating Multi-Agent Discussions into User's Evolving Documents",
+    authors: ["Heechan Lee", "et al."],
+    imgPath: "",
+    type: "arxiv",
+    conference: "Under Review",
+  },
+  {
+    title: "A Large-scale Longitudinal Group Collaboration Dialog Dataset",
+    authors: ["Heechan Lee*", "Jeonggyu Kang*", "et al."],
+    imgPath: "",
+    type: "arxiv",
+    conference: "Under Review",
+  },
+  {
+    title:
       "Accuracy, Diversity, and Reflection: Purpose-driven Evaluation for Social Simulation",
     authors: ["Heechan Lee", "Joseph Seering"],
     imgPath: "/assets/pub_img/accuracy.png",
@@ -25,7 +40,7 @@ export const publicationList: Publication[] = [
   },
   {
     title:
-      "Evalet: Evaluating Large Language Models by Fragmenting Outputs into Functions",
+      "Evalet: Evaluating Large Language Models through Functional Fragmentation",
     authors: [
       "Tae Soo Kim*",
       "Heechan Lee*",
@@ -36,7 +51,7 @@ export const publicationList: Publication[] = [
     imgPath: "/assets/pub_img/evalet.png",
     type: "conference",
     conference: "CHI 2026",
-    mainLink: "https://arxiv.org/abs/2509.11206",
+    mainLink: "https://dl.acm.org/doi/10.1145/3772318.3790285",
     award: "Honorable Mention",
   },
   {
