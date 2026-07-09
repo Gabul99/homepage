@@ -21,12 +21,10 @@ const grouped = {
         I'm working in <a href="https://cstlab.org/" target="_blank">Collaborative Social Technologies Lab(CSTL)</a> and <a href="https://www.kixlab.org" target="_blank">KAIST Interaction Lab(KIXLAB)</a>, where I'm advised by <a href="https://joseph.seering.org/" target="_blank">Prof. Joseph Seering</a> and <a href="https://juhokim.com/" target="_blank">Prof. Juho Kim</a>.
         <br />
         <br />
-        I am interested in <b>Human-AI Interaction</b>, with a focus on designing interactive systems for collaboration between humans and AI agents.
-        My research begins from the question of why people struggle to steer AI systems toward their goals.
-        I study this challenge from two directions: (1) how users can express their intent and provide relevant context to AI agents, and (2) how they can evaluate AI behaviors and provide feedback in return.
-        During my Master’s research, I have explored interfaces that ground multi-agent collaboration in users’ working contexts, as well as interfaces that help users evaluate large-scale AI responses through functional fragmentation.
-        Across these projects, I have found that both prompting AI and auditing AI depend on how users make sense of their data, context, and model outputs.
-        I aim to design interactive systems that support sensemaking and evaluation, helping a broad range of users—from everyday knowledge workers to AI developers—collaborate with AI systems.
+        I am interested in <b>Human-AI Interaction</b> and <b>Human-centered AI</b>.
+        My research aims to support <b>dynamic alignment</b> between humans and AI agents, grounded in mutual <b>understanding</b> and <b>structuring</b>.
+        I approach this from two complementary directions: (1) <i>from the human's perspective</i>, by building interactive interfaces that help people understand, evaluate, and strcuture actionable feedback on AI behavior, and (2) <i>from the AI's perspective</i>, by improving its ability to understand user intent and context and to strcuture what actions to take.
+        I'm excited to explore how we can design the collaboration betwen humans and AI agents, with interface implementation and data-centric approaches!
       </p>
     </div>
     <img class="main" src="/assets/img/main.JPG" />
@@ -45,7 +43,7 @@ const grouped = {
   <div class="pub-list">
     {grouped.arxiv.length > 0 && (
     <>
-      <h2 class="section-title">Preprint & Under Review</h2>
+      <h2 class="section-title">Preprint & In submission</h2>
       {grouped.arxiv.map((p) => (
         <PublicationBlock publication={p} />
       ))}

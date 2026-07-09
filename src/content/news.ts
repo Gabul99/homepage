@@ -5,6 +5,11 @@ export interface News {
 
 export const newsList: News[] = [
   {
+    date: "2026-07",
+    description:
+      "🎉 My TIDES paper has been accepted to COLM 2026! See you in San Francisco!",
+  },
+  {
     date: "2026-03",
     description:
       "🎉 My <a href='https://heechanlee.com/assets/PoliSim_CHI_26__Simulation_Evaluation.pdf' target='_blank'>Accuracy, Diversity and Reflection</a> paper has been accepted to <a href='https://polisim.github.io/' target='_blank'>PoliSim Workshop</a> at CHI 2026!",
@@ -21,7 +26,7 @@ export const newsList: News[] = [
   },
   {
     date: "2025-09",
-    description: "⛱️ Attend UIST 2025 at Busan, Korea. See you at Busan!",
+    description: "⛱️ Attend UIST 2025 at Busan, Korea. See you in Busan!",
   },
   {
     date: "2025-07",
@@ -44,10 +49,10 @@ export const newsList: News[] = [
   {
     date: "2024-12",
     description:
-      "✅ One ICADL paper is published, what I worked during NTU exchange program",
+      "✅ One ICADL paper is published, what I worked during NTU exchange program.",
   },
   {
     date: "2024-11",
-    description: "🚀 Website Opened. First time to use Astro.",
+    description: "🚀 Website opened. First time to use Astro.",
   },
 ];

@@ -18,14 +18,22 @@ export const publicationList: Publication[] = [
     authors: ["Heechan Lee", "et al."],
     imgPath: "",
     type: "arxiv",
-    conference: "Under Review",
+    conference: "In submission",
   },
   {
-    title: "A Large-scale Longitudinal Group Collaboration Dialog Dataset",
-    authors: ["Heechan Lee*", "Jeonggyu Kang*", "et al."],
-    imgPath: "",
-    type: "arxiv",
-    conference: "Under Review",
+    title:
+      "TIDES: A Longitudinal Bilingual Dataset for Modeling Multi-Party Social Dynamics",
+    authors: [
+      "Heechan Lee*",
+      "Jeonggyu Kang*",
+      "Junho Myung",
+      "Jaywoong Jeong",
+      "Juho Kim",
+      "Joseph Seering",
+    ],
+    imgPath: "/assets/pub_img/tides.png",
+    type: "conference",
+    conference: "COLM 2026",
   },
   {
     title:
