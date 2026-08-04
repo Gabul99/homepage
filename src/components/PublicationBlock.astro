@@ -10,6 +10,7 @@ const knownAuthors: Record<string, string> = {
   "Yoonjoo Lee": "https://yoonjoolee.com/",
   "Jaywoong Jeong": "https://www.jaywoong.me/",
   "Junho Myung": "https://junhomyung.github.io/",
+  "Jeonggyu Kang": "https://jeonggyu.me"
   // 필요할 때마다 추가
 };
 
@@ -53,6 +54,18 @@ const knownAuthors: Record<string, string> = {
         );
       })}
     </p>
+    {publication.projectWebsite && (
+      <div class="link-row">
+        <a
+          class="project-link"
+          href={publication.projectWebsite}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Project Website ↗
+        </a>
+      </div>
+    )}
     <p class="conference-row">
       <span class="conference">{publication.conference}</span>
       {publication.award && (
@@ -126,6 +139,28 @@ const knownAuthors: Record<string, string> = {
     font-size: 11px;
     font-weight: 500;
     white-space: nowrap;
+  }
+  div.link-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+  }
+  a.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  a.project-link:hover {
+    filter: brightness(0.92);
   }
   .award-icon {
     width: 14px;

@@ -7,6 +7,8 @@ export interface Publication {
   mainLink?: string;
   /** 수상 정보 (예: "Honorable Mention") - 있으면 conference 옆에 칩으로 표시 */
   award?: string;
+  /** 프로젝트 웹사이트 URL - 있으면 Project Website 버튼으로 표시 */
+  projectWebsite?: string;
 }
 
 // Type: conference, short, arxiv
@@ -32,8 +34,10 @@ export const publicationList: Publication[] = [
       "Joseph Seering",
     ],
     imgPath: "/assets/pub_img/tides.png",
+    mainLink: "https://arxiv.org/abs/2608.01724",
     type: "conference",
     conference: "COLM 2026",
+    projectWebsite: "https://tides.cstlab.org",
   },
   {
     title:
