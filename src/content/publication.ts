@@ -16,9 +16,16 @@ export interface Publication {
 export const publicationList: Publication[] = [
   {
     title:
-      "An Interface Integrating Multi-Agent Discussions into User's Evolving Documents",
-    authors: ["Heechan Lee", "et al."],
+      "DocuTeam: Mixed-Initiative Multi-Agent Discussions around Evolving Documents",
+    authors: [
+      "Heechan Lee",
+      "Juhyeon Choi",
+      "Tae Soo Kim",
+      "Juho Kim",
+      "Joseph Seering",
+    ],
     imgPath: "",
+    mainLink: "https://arxiv.org/abs/2609.29309",
     type: "arxiv",
     conference: "In submission",
   },
