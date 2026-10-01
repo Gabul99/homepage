@@ -5,9 +5,14 @@ export interface News {
 
 export const newsList: News[] = [
   {
+    date: "2026-09",
+    description:
+      "🏆 I've been recognized as an Outstanding Reviewer at HCOMP 2026!",
+  },
+  {
     date: "2026-07",
     description:
-      "🎉 My TIDES paper has been accepted to COLM 2026! See you in San Francisco!",
+      "🎉 My TIDES paper has been accepted to COLM 2026! See you in San Francisco! (Oct 5th ~ Oct 10th)",
   },
   {
     date: "2026-03",
